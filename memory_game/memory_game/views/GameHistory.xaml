@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="memory_game.views.GameHistory"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="0">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#c51ad9"
+                                  Offset="0.0"/>
+                    <GradientStop Color="#6419b1"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            
+            <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Historia gier:" FontSize="24" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="Sortuj: " FontSize="24" TextColor="White" HorizontalOptions="End"/>
+                    <RadioButton Content="Data" GroupName="sort" CheckedChanged="Sort" IsChecked="True"/>
+                    <RadioButton Content="Punkty" GroupName="sort" CheckedChanged="Sort"/>
+                </StackLayout>
+                <ScrollView x:Name="scrollView" HorizontalOptions="Center">
+
+                </ScrollView>
+            </StackLayout>
+            <Button Text="Powrót" Clicked="NavToMainPage" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

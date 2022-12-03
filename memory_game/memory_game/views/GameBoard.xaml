@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:dni_otwatre.views"
+             x:Class="memory_game.views.GameBoard"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <AbsoluteLayout.Background>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#c51ad9"
+                                  Offset="0.0"/>
+                    <GradientStop Color="#6419b1"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </AbsoluteLayout.Background>
+
+            <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.2" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <ProgressBar x:Name="Progres" ScaleY="10" ProgressColor="#ea37ff" Margin="0,20,0,50"/>
+                <Grid x:Name="plansza" ColumnDefinitions="80,80,80,80" RowDefinitions="80,80,80"></Grid>
+            </StackLayout>
+
+            <StackLayout AbsoluteLayout.LayoutBounds="0.1, 0.04" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Label Text="CZAS: " FontSize="30" HorizontalOptions="Center" TextColor="White"/>
+                <Label x:Name="czas" Text="0" FontSize="30" HorizontalOptions="Center" TextColor="White"/>
+            </StackLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0.95, 0.04" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Label Text="PUNKTY: " FontSize="30" HorizontalOptions="Center" TextColor="White"/>
+                <Label x:Name="punkty" Text="0" FontSize="30" HorizontalOptions="Center" TextColor="White"/>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

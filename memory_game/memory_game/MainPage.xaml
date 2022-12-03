@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="memory_game.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#c51ad9"
+                                  Offset="0.0"/>
+                    <GradientStop Color="#6419b1"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="Logo.png"                  
+                   Grid.Row="0" Grid.Column="0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Margin="0,10,0,5"/>
+
+            <Image Source="screen.png"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="0,10"/>
+
+            <Grid Grid.Row="2"
+                  Grid.Column="0"
+                  HorizontalOptions="Center"
+                  Margin="0,0,0,5">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Jak grać?" CornerRadius="10" Grid.Row="0" Grid.Column="0" FontSize="20" Clicked="NavToTutorial"/>
+                <Button Text="▸" CornerRadius="10" Grid.Row="0" Grid.Column="1" FontSize="40" Clicked="NavToGameBoard"/>
+                <Button Text="Historia gier" CornerRadius="10" Grid.Row="0" Grid.Column="2" FontSize="20" Clicked="NavToRanking"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
